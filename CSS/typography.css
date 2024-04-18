@@ -1,5 +1,12 @@
 @import '_config.css';
 
+* {
+  font-family: var(--font-main);
+}
+.font-alt {
+  font-family: var(--font-alt);
+}
+
 h1 {
   font-size: calc(var(--font-base) + var(--font-size-step) * 6);
   line-height: calc(

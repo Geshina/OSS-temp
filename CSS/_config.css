@@ -25,15 +25,6 @@ body {
     --layout-gap-yx: 1rem 1rem;
   }
 }
-@media screen and (max-width: 512px) /* and (pointer: coarse) */ {
-  :root {
-    --layout--parent-gap: 6rem;
-    --layout-grid: repeat(4, 1fr);
-    --layout-margins-yx: 6rem 8rem;
-    --layout-gap-yx: 1rem 1rem;
-  }
-}
-
 /* TYPO */
 :root {
   --font-main: 'Inter';

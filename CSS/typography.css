@@ -1,5 +1,7 @@
 @import '_config.css';
 
+/* MOVE THESE AS TYPEFACE IN CONFIG */
+
 * {
   font-family: var(--font-main);
 }
@@ -50,4 +52,12 @@ button,
 span {
   font-size: (var(--font-base));
   line-height: calc(var(--font-base) + var(--line-height-offset));
+}
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.material-symbols-outlined-40 {
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 40;
 }

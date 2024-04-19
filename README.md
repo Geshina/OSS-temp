@@ -14,7 +14,7 @@ Folders are structured for vite
 Use this command to clone the repo
 
 ```
-git clone https://github.com/Net-Nexus/Osseus
+git submodule add https://github.com/Net-Nexus/osseus
 ```
 
 css import

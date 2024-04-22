@@ -45,13 +45,16 @@ h6 {
     var(--font-base) + var(--font-size-step) * 1 + var(--line-height-offset)
   );
 }
-
 p,
 a,
 button {
   font-size: (var(--font-base));
   line-height: calc(var(--font-base) + var(--line-height-offset));
 }
+.bold {
+  font-weight: 600;
+}
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48;
 }

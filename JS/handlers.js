@@ -1,8 +1,5 @@
 function globalEventHandler(type, origin, callback = null) {
-  const bodyElement = document.body
-  const originElementAll = document.querySelectorAll(origin)
-
-  if (!originElementAll.length) {
+  if (!document.querySelector(origin)) {
     console.warn(origin + ' not found')
     return
   }
@@ -11,16 +8,17 @@ function globalEventHandler(type, origin, callback = null) {
     return
   }
 
-  bodyElement.addEventListener(type, (e) => {
-    const originElement = e.target
-    if (!originElement.matches(origin)) return
+  document.addEventListener(type, (e) => {
+    if (!e.target.matches(origin)) return
 
-    originElement.dataset.target ||= origin
-    const targetElement = originElement.closest(originElement.dataset.target)
+    const originElement = document.querySelector(origin)
 
-    let dataObj = {}
+    const targetSelector = originElement.dataset.target || origin
+    const targetElement = document.querySelector(targetSelector)
+
+    const dataObj = {}
     dataObj.origin = originElement.dataset
-    dataObj.target = targetElement.dataset
+    dataObj.target = targetElement?.dataset // if target has no attributes
 
     callback(dataObj)
   })

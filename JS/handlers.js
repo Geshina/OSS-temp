@@ -11,14 +11,17 @@ function globalEventHandler(type, origin, callback = null) {
   document.addEventListener(type, (e) => {
     if (!e.target.matches(origin)) return
 
-    const originElement = document.querySelector(origin)
-
+    const originElement = e.target
     const targetSelector = originElement.dataset.target || origin
     const targetElement = document.querySelector(targetSelector)
 
     const dataObj = {}
+
     dataObj.origin = originElement.dataset
     dataObj.target = targetElement?.dataset // if target has no attributes
+
+    dataObj.origin.selector = origin
+    dataObj.target.selector = targetSelector
 
     callback(dataObj)
   })

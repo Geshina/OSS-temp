@@ -27,7 +27,7 @@ body {
 }
 /* TYPO */
 :root {
-  --font-main: 'Inter';
+  --font-main: 'Helvetica';
   --font-alt: 'Playfair';
 
   --font-base: 1rem;

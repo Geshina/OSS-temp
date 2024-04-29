@@ -1,0 +1,3 @@
+button[data-state='active'] {
+  background-color: red;
+}

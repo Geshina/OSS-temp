@@ -1,5 +1,3 @@
-import { documentId } from 'firebase/firestore'
-
 function multiStateToggle(dataObj) {
   const states = new Set((dataObj.origin.states || '').split(' '))
 
@@ -15,11 +13,11 @@ function multiStateToggle(dataObj) {
 export { multiStateToggle }
 
 function singleStateToggle(dataObj) {
-  const stateElement = document.getElementById(dataObj.origin.state)
-  const targetAll = document.querySelectorAll(dataObj.origin.target)
+  const stateElement = document.getElementById(dataObj.origin.sst)
+  const targetAll = document.querySelectorAll(dataObj.target.selector)
 
   targetAll.forEach((target) => {
-    delete target.dataset
+    target.dataset.state = 'inactive'
   })
 
   stateElement.dataset.state = 'active'

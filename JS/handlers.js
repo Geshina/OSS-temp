@@ -9,7 +9,7 @@ function globalEventHandler(type, origin, callback = null) {
   }
 
   document.addEventListener(type, (e) => {
-    if (!e.target.matches(origin)) return
+    if (!e.target.closest(origin)) return
 
     const originElement = e.target
     const targetSelector = originElement.dataset.target || origin

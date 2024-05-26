@@ -1,3 +1,54 @@
-button[data-state='active'] {
-  background-color: red;
+header {
+  width: 100%;
+  background-color: white;
+}
+img {
+  border-radius: 2px;
+  background-color: #f2f2f2;
+  max-width: 100%;
+  min-height: 256px;
+}
+.card {
+  border-radius: 2px;
+  background-color: #f2f2f2;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.cart[data-state='inactive'] {
+  display: none;
+}
+.cart[data-state='active'] {
+  width: 448px;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  right: 0;
+  z-index: 2;
+}
+.overlay[data-state='inactive'] {
+  opacity: 0;
+  display: none;
+}
+.overlay[data-state='active'] {
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0.2;
+  /* backdrop-filter: blur(10px); */
+}
+.mt-auto {
+  margin-top: auto;
+}
+.form {
+  padding: 0.25rem 0.5rem;
+}
+._faq_target[data-state='inactive'] {
+  display: none;
+}
+._faq_target[data-state='active'] {
+  display: inherit;
 }

@@ -13,14 +13,17 @@ function multiStateToggle(dataObj) {
 export { multiStateToggle }
 
 function singleStateToggle(dataObj) {
-  const stateElement = document.getElementById(dataObj.origin.sst)
+  const stateElement = document.querySelectorAll(dataObj.origin.sst)
   const targetAll = document.querySelectorAll(dataObj.target.selector)
 
   targetAll.forEach((target) => {
-    target.dataset.state = 'inactive'
+    target.dataset.state ||= 'inactive'
   })
 
-  stateElement.dataset.state = 'active'
+  stateElement.forEach((element) => {
+    if (element.dataset.state === 'inactive') element.dataset.state = 'active'
+    else element.dataset.state = 'inactive'
+  })
 }
 
 export { singleStateToggle }

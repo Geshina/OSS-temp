@@ -73,7 +73,9 @@
 .pos-fixed {
   position: fixed;
 }
-
+.pos-abs {
+  position: absolute;
+}
 .push-left {
   margin-right: auto;
 }
@@ -82,10 +84,10 @@
 }
 
 .border-bottom {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #999;
 }
 .border-top {
-  border-top: 1px solid black;
+  border-top: 1px solid #999;
 }
 button {
   padding: 0.5rem 1rem;

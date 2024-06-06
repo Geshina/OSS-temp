@@ -11,7 +11,7 @@ function globalEventHandler(type, origin, callback = null) {
   document.addEventListener(type, (e) => {
     if (!e.target.closest(origin)) return
 
-    const originElement = e.target
+    const originElement = e.target.closest(origin)
     const targetSelector = originElement.dataset.target || origin
     const targetElement = document.querySelector(targetSelector)
 

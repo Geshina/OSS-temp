@@ -122,3 +122,10 @@ main {
   aspect-ratio: 3/2;
   object-fit: cover;
 }
+.strike-through{
+  text-decoration: line-through;
+}
+input::placeholder{
+  color: black;
+  opacity: 0.2;
+}
